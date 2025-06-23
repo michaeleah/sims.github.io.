@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="updates.html">Updates</a>
+            <a href="mods.html">Mods</a>
+            <a href="packs.html">Packs</a>
+        </div>
+        <div id="searchBarContainer"></div> <!-- Container for dynamically loaded search bar -->
+    </nav>
+    <main>
+        <section class="mods">
+            <h1>Looking for mods and custom content?</h1>
+            <div class="button-container">
+                <a href="https://www.curseforge.com/sims4" class="styled-button">CurseForge</a>
+            </div>    
+        </section>
+        <section class="content-updates">
+            <div class="gallery">
+                <div class="card">
+                    <a href="https://www.curseforge.com/sims4/search?page=1&pageSize=20&sortBy=relevancy&class=build-buy&categories=build-mode" target="_blank">
+                        <img src="build and buy.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>Build and Buy mods</h3>
+                            <p>Mods.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.curseforge.com/sims4/search?page=1&pageSize=20&sortBy=relevancy&class=create-a-sim" target="_blank">
+                        <img src="create a sim.jpg" alt="Create a Sim mods">
+                        <div class="card-content">
+                            <h3>Create a Sim mods</h3>
+                            <p>Mods.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.curseforge.com/sims4/search?page=1&pageSize=20&sortBy=relevancy&class=save-files" target="_blank">
+                        <img src="save file.jpg" alt="Save files mods">
+                        <div class="card-content">
+                            <h3>Save files mods</h3>
+                            <p>Mods.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.curseforge.com/sims4/search?page=1&pageSize=20&sortBy=relevancy&class=sims-households" target="_blank">
+                        <img src="household.jpg" alt="Sims and households">
+                        <div class="card-content">
+                            <h3>Sims and households</h3>
+                            <p>Mods.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Michaeleah Murray</p>
+    </footer>
+    <script>
+        // Load the search bar HTML dynamically
+        fetch('search_bar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('searchBarContainer').innerHTML = data;
+                
+                // Add event listener for search form submission
+                document.getElementById('searchForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+                
+                    // Map search terms to specific URLs
+                    const searchRedirects = {
+                        'home': 'home.html',
+                        'mods': 'mods.html',
+                        'updates': 'updates.html',
+                        'packs': 'packs.html'
+                        // Add more mappings as needed
+                    };
+                
+                    // Check if the search term matches a key in searchRedirects
+                    if (query && searchRedirects.hasOwnProperty(query)) {
+                        window.location.href = searchRedirects[query];
+                    } else {
+                        // Default behavior: redirect to search_results.html with the query parameter
+                        window.location.href = `search_results.html?query=${encodeURIComponent(query)}`;
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error loading search bar:', error);
+            });
+    </script>
+</body>
+</html>

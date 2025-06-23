@@ -1,0 +1,31 @@
+<div class="search-container">
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    
+        // Map search terms to specific URLs
+        const searchRedirects = {
+            'home': 'home.html',
+            'mods': 'mods.html',
+            'updates': 'updates.html',
+            'packs': 'packs.html'
+            // Add more mappings as needed
+        };
+    
+        // Check if the search term matches a key in searchRedirects
+        if (query && searchRedirects.hasOwnProperty(query)) {
+            window.location.href = searchRedirects[query];
+        } else {
+            // Default behavior: redirect to search_results.html with the query parameter
+            window.location.href = `search_results.html?query=${encodeURIComponent(query)}`;
+        }
+    });
+    
+</script>

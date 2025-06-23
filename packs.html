@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Style to make the video cover the entire page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body class="fullscreen-iframe">
+    <nav class="w3-bar w3-black navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="nav-links">
+            <a href="home.html" class="w3-button w3-bar-item">Home</a>
+            <a href="updates.html" class="w3-button w3-bar-item">Updates</a>
+            <a href="mods.html" class="w3-button w3-bar-item">Mods</a>
+            <a href="packs.html" class="w3-button w3-bar-item">Packs</a>
+        </div>
+        <div id="searchBarContainer"></div> <!-- Container for dynamically loaded search bar -->
+    </nav>
+    <main>
+        <section class="title">
+            <h1>Sims 4 Expansion Packs</h1>
+        </section>
+        <section class="content-updates">
+            <div class="gallery">
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-get-to-work" target="_blank">
+                        <img src="get to work.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Get To Work</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-get-together" target="_blank">
+                        <img src="get together.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Get Together</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-city-living" target="_blank">
+                        <img src="city living.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 City Living</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-cats-and-dogs" target="_blank">
+                        <img src="pets.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Pets</h3>
+                            <p>family and friends .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-seasons" target="_blank">
+                        <img src="seasons.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Seasons</h3>
+                            <p>Everyday activities .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-get-famous" target="_blank">
+                        <img src="get famous.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Get Famous</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-island-living" target="_blank">
+                        <img src="island.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 island Living</h3>
+                            <p>outdoor and activities .</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-discover-university" target="_blank">
+                        <img src="university.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Discover University</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-snowy-escape" target="_blank">
+                        <img src="snowy escape.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 snowy escape</h3>
+                            <p>outdoor adventures .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-cottage-living" target="_blank">
+                        <img src="cottage.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Cottage Living</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-high-school-years" target="_blank">
+                        <img src="highschool.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 High School Years</h3>
+                            <p>career & lifestyle .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-growing-together" target="_blank">
+                        <img src="growing together.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Growing Together</h3>
+                            <p>family and friends .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-horse-ranch-expansion-pack" target="_blank">
+                        <img src="horse.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Horse Ranch</h3>
+                            <p>family and friends .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-for-rent-expansion-pack" target="_blank">
+                        <img src="for rent.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 For Rent</h3>
+                            <p>family and friends .</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-everyday-sims-bundle" target="_blank">
+                        <img src="bundle.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Everyday Sims Bundle</h3>
+                            <p>three games included.</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="card">
+                    <a href="https://www.ea.com/games/the-sims/the-sims-4/store/addons/the-sims-4-decorators-dream-bundle" target="_blank">
+                        <img src="bundle 2.jpg" alt="Build and Buy mods">
+                        <div class="card-content">
+                            <h3>The Sims™ 4 Decorator's Dream Bundle</h3>
+                            <p>three games included.</p>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Michaeleah Murray</p>
+    </footer>
+
+    <!-- JavaScript for search functionality -->
+    <script>
+        // Load the search bar HTML dynamically
+        fetch('search_bar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('searchBarContainer').innerHTML = data;
+                
+                // Add event listener for search form submission
+                document.getElementById('searchForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+                
+                    // Map search terms to specific URLs
+                    const searchRedirects = {
+                        'home': 'home.html',
+                        'mods': 'mods.html',
+                        'updates': 'updates.html',
+                        'packs': 'packs.html'
+                        // Add more mappings as needed
+                    };
+                
+                    // Check if the search term matches a key in searchRedirects
+                    if (query && searchRedirects.hasOwnProperty(query)) {
+                        window.location.href = searchRedirects[query];
+                    } else {
+                        // Default behavior: redirect to search_results.html with the query parameter
+                        window.location.href = `search_results.html?query=${encodeURIComponent(query)}`;
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error loading search bar:', error);
+            });
+    </script>
+</body>
+</html>
